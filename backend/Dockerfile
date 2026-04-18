@@ -13,7 +13,7 @@ RUN npm audit --audit-level=high || true
 RUN npm run build --no-cache
 
 # Stage 3: Production Runner
-FROM node:20-alpine AS runner
+FROM node:20-alpine AS production
 WORKDIR /app
 RUN apk add --no-cache dumb-init
 
